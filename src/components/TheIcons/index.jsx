@@ -20,7 +20,7 @@ export default function Icon() {
               Each of these icons represent something unique
             </div>
             <div className="main-container">
-              <div className='main-container-item'><img src="assets/svg/TheIcons/pointer.svg" alt="" />The movers </div>
+              <div className='main-container-item'><img src="assets/svg/TheIcons/pointer.svg" alt="" />The Movers </div>
               <div className='main-container-item'><img src="assets/svg/TheIcons/pointer.svg" alt="" />The Grinders</div>
               <div className='main-container-item'><img src="assets/svg/TheIcons/pointer.svg" alt="" />The Shakers </div>
               <div className='main-container-item'><img src="assets/svg/TheIcons/pointer.svg" alt="" />The Hustlers </div>

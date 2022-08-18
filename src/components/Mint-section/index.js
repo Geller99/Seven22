@@ -19,7 +19,7 @@ const MintSection = () => {
                             </div>
                             <div className="item">
                                 <img src="/assets/svg/right-arrow.svg" alt="arrow" />
-                                <div className="desc">Only 500 NFT will be reserved for the pre-sale </div>
+                                <div className="desc">Only 500 NFTs will be reserved for the pre-sale </div>
                             </div>
                             <div className="item">
                                 <img src="/assets/svg/right-arrow.svg" alt="arrow" />
@@ -28,7 +28,7 @@ const MintSection = () => {
 
                         </div>
                         <div className="items-footer-heading">
-                            <h2>Pre-sale whitelist</h2>
+                            <h2>Pre-sale allowlist</h2>
                             <h3>July 31 07:22 pm EST</h3>
                         </div>
                     </div>
@@ -41,13 +41,13 @@ const MintSection = () => {
                             <div className="item">
                                 <img src="/assets/svg/right-arrow.svg" alt="arrow" />
                                 <div className="desc">
-                                    Price: 0.8091 eth </div>
+                                    Price: 0.722 eth </div>
                             </div>
 
 
                         </div>
                         <div className="items-footer-heading">
-                            <h2>Public Auction</h2>
+                            <h2>Public Mint</h2>
                             <h3>August 22 07:22 pm EST</h3>
                         </div>
                     </div>
