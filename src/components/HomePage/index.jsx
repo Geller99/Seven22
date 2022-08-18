@@ -19,7 +19,7 @@ export function HomePage() {
       <div className="homepage" id='welcome'>
         <div className="homepage-inner-wrapper">
           <div className='homepage-mobile-presale'> 
-            <a href="https://onemint.io/join/Seven22" target='_blank' rel="noreferrer">Click Here to Join The 50% off List!</a>
+            {/* <a href="https://onemint.io/join/Seven22" target='_blank' rel="noreferrer">Click Here to Join The 50% off List!</a> */}
           </div>
           <div className="homepage-heading"><span>WE</span> Are the culture</div>
           <div className="homepage-subheading">Greatness is in our DNA</div>
