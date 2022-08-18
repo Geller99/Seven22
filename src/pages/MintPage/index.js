@@ -150,8 +150,8 @@ const MintPage = () => {
             }
 
 
-            const MAX_APES = await session.contract.methods.MAX_APES().call();           
-            const maxApePurchase = await session.contract.methods.maxApePurchase().call();
+            // const MAX_APES = await session.contract.methods.MAX_APES().call();           
+            // const maxApePurchase = await session.contract.methods.maxApePurchase().call();
 
             const apePrice = await session.contract.methods.apePrice().call();
             const price = window.BigInt( apePrice.toString() );
