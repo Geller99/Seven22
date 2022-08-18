@@ -1,0 +1,29 @@
+@import "../css/Global.scss";
+
+// components
+@import "../components/Team/style.scss";
+@import "../components/Mint-section/style.scss";
+
+@import "../components/faq/style.scss";
+@import "../components/JoinCommunity/style.scss";
+@import "../components/OurSponsors/style.scss";
+@import "../components/Footer/style.scss";
+
+@import "../components/NavBar/style.scss";
+@import "../components/HomePage/style.scss";
+@import "../components/AboutUs/style.scss";
+@import "../components/TheIcons/style.scss";
+@import "../components/BluePrint/style.scss";
+
+@import "../components/IconSlider/style.scss";
+
+// pages styles
+
+// mint-page components styles
+@import "../pages/MintPage/style.scss";
+@import "../pages/MintPage/Components/InputNumber/style.scss";
+@import "../pages/MintPage/Components/mint-Carosule/style.scss";
+
+// pages styles
+
+@import "../pages/TermsPage/style.scss";

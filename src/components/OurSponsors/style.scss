@@ -1,0 +1,157 @@
+.our-sponsor-container {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+
+
+    // mobile media query
+    @media (max-width: 768px) {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+
+    .sponsor-heading {
+        // border: 2px solid green;
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: -3.33px;
+        left: 70px;
+        z-index: 10;
+
+        @media(max-width:1200px) {
+            position: unset;
+            margin-top: 0px;
+            margin-left: 24px;
+        }
+
+        .heading-name {
+            font-family: 'Primal';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 80px;
+            line-height: 92px;
+            color: #FFFFFF;
+
+            min-width: 790px;
+
+            @media(max-width:768px) {
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 37px;
+                // min-width: 220px;
+                min-width: 60%;
+
+            }
+
+            @media(max-width:576px) {
+                min-width: 100%;
+            }
+        }
+
+        .dotted-line {
+
+            position: relative;
+            left: 20px;
+
+            @media(max-width: 768px) {
+                left: -38px;
+            }
+        }
+
+
+    }
+
+    .sponsor-content {
+        margin-top: 100px;
+        margin-bottom: 60px;
+
+        // tablet media query
+        @media (max-width: 768px) {
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+
+        // mobile media query
+        @media (max-width: 768px) {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .sponsor-content-wrapper {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+
+            // laptop media query
+            @media (max-width: 1024px) {
+                flex-wrap: wrap;
+            }
+
+
+            .img-wrapper {
+                margin-bottom: 20px;
+
+                // img {
+                //     width: 100%;
+                //     height: auto;
+
+                //     // laptop media query
+                //     @media (max-width: 1024px) {
+                //         width: 70%;
+                //         margin: 0 auto;
+                //         justify-content: center;
+
+                //     }
+                // }
+
+                // mobile media query
+                @media (max-width: 576px) {
+                    &:last-child {
+                        img {
+                            width: 300px;
+                        }
+                    }
+
+                    ;
+                }
+
+
+            }
+        }
+    }
+}
+
+
+.circle-box {
+
+    position: absolute;
+    left: 0px;
+    top: -20px;
+
+
+
+    :nth-child(2) {
+        position: relative;
+        top: 51px;
+        left: -67px;
+
+        @media(max-width:768px) {
+            top: 26px;
+            left: -56px;
+        }
+
+    }
+
+    @media(max-width: 768px) {
+        img {
+            height: 60px;
+            width: 60px;
+        }
+    }
+}

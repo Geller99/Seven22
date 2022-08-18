@@ -1,0 +1,117 @@
+.slider-section {
+
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 250px;
+    top: 125px;
+    max-width: 650px;
+
+    @media(max-width:1200px) {
+        position: relative;
+        left: -10vw;
+        top: unset;
+
+    }
+
+    .toggle-btn {
+        height: 56px;
+        width: 56px;
+        border: 1px solid #FFFFFF;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+
+        .rotated {
+            transform: rotate(-180deg);
+        }
+
+        @media(max-width: 768px) {
+            height: 32px;
+            width: 32px;
+
+            img {
+                height: 13.71px;
+                width: 13.71px;
+            }
+        }
+    }
+
+    .slider-main {
+
+        position: relative;
+        left: 80px;
+
+        @media(max-width:768px) {
+            left: 30px;
+        }
+
+        .primary-slide {
+            width: 24vw; // setup media query for other
+            height: 32vw;;
+            position: relative;
+            z-index: 2;
+
+            @media(max-width:768px) {
+                width: 51.79vw;
+                height: 51.79vw;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+            }
+        }
+
+        .secondary-slide {
+            position: absolute;
+            right: -39px;
+            width: 90.5%;
+            height: 90.5%;
+            top: 9%;
+
+            z-index: 1;
+            @media(max-width:768px) {
+                top: 9.74%;
+                right: -15px;
+            }
+            img {
+                width: 100%;
+                height: inherit;
+                object-fit: cover;
+
+            }
+        }
+
+        .hidden-slide {
+            display: none;
+            visibility: hidden;
+            position: absolute;
+        }
+
+        .slide-item {
+
+            
+
+            img {
+                width: 100%;
+                object-fit: cover;
+
+            }
+        }
+
+
+    }
+
+    .toggle-btn-2 {
+        left: 200px;
+
+        @media(max-width:768px) {
+            left: 80px;
+        }
+    }
+}

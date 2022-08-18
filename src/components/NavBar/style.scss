@@ -1,0 +1,152 @@
+.navbar{
+    height: 104px;
+    display: flex;
+    padding: 0px 80px;
+    background: rgba(17, 17, 17, 0.5);
+    backdrop-filter: blur(300px);
+    
+    top: 0;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 110;
+
+    @media(max-width:576px){
+        height: 75px;
+        padding: 20px 24px;
+    }
+    .navbar-inner-wrapper{
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        .navbar-logo{
+            height: 59px;
+            @media(max-width:576px){
+                height: 32px;
+              
+            }
+        }
+        
+        .navbar-tabs-container{
+            
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto;
+            column-gap: 10px;
+
+            a{
+                text-decoration: none;
+
+            }
+
+            @media(max-width:1200px){
+                display: none;
+            }
+            .navbar-tab{
+                
+                padding: 12px 24px ;
+                cursor: pointer;
+                font-size: 18px;
+                line-height: 26px;
+                font-weight: 800;
+                font-family: 'Code Next', sans-serif;
+                color: #707070;               
+            }
+            .active{
+                color:#111111;
+                cursor: pointer;
+                // box-shadow: 0px 0px 32px 24px rgba(251, 249, 240, 0.4), inset 0px 53px 24px rgba(255, 253, 253, 0.1);
+
+        //Note: using this box-shadow instead of above as the above one(of UI design) doesn't seems to work, or go with as there in UI design ?
+                box-shadow: 0px 0px 32px 5px rgba(251, 249, 240, 0.4), inset 0px 53px 24px rgba(255, 253, 253, 0.1);
+
+
+                border-radius: 24px;                
+
+background: #FBD660;
+width: 100%px;
+height: 50px;
+            }
+           
+        }
+        .social-icons{
+                
+            display: grid;
+            grid-template-columns: auto auto auto;
+            column-gap: 24px;
+            align-items: center;
+            cursor: pointer;
+            
+                .social-icon{
+           height: 32px;
+           width: 32px;
+           border-radius: 50%;
+           background: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+           
+                }
+            
+        }
+        .list-joining-link{
+            display: flex;
+            align-items: center;
+            @media(max-width:1200px){
+                display: none;
+            }
+            
+            a{
+                font-size: 18px;
+                line-height: 26px;
+                color: #FBD660;
+                font-family: 'Code Next', sans-serif;
+
+                @media (min-width: 1200px) and (max-width: 1250px) {
+                    font-size: 15px;
+                }
+                
+            }
+            img{
+                margin-left: 3px;
+            }
+           
+        }
+        .navbar-mobile-menu-icon{
+            display: none;
+            @media(max-width: 1200px){
+                display: block;
+                height: 44px;
+                width: 44px;
+            }
+            @media(max-width:576px){
+                height: 24px;
+                width: 24px;
+            }
+        }
+
+        .navbar-mobile{
+            position: absolute;
+            height: 100vh;
+            left: 0px;
+            top:75px;
+            width: 100%;
+            background: #050505;
+            .navbar-mobile-item{
+                
+                font-family: 'Primal',sans-serif;
+                font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+margin-top: 56px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+            }
+        }
+    }
+
+}
