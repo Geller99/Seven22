@@ -17,7 +17,7 @@ const MintSlider = () => {
 
     return (
         <>
-            <h1>TODO: Swiper</h1>
+            {/* <h1>TODO: Swiper</h1> */}
             {/*
             <Swiper
                 slidesPerView={6}
