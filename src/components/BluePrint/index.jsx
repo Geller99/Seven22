@@ -165,11 +165,14 @@ The Seven22 Private Wealth Club which includes:<br/><br/>
        
 
       </div>
-
-      <div className="bottom-container">
+        
+      <a href='https://open.spotify.com/playlist/5p8ynpH8nLE3BcdJbnVJqz?si=y6lHEJ6UTx2fdLNN6Z1djA&fbclid=IwAR2lJspgPJlHwMTT79aNJrfn_BSTK0yl7m_Wl70h9uONa3BnYVn0nt982xw&nd=1' target="_blank" rel="noreferrer">
+        <div className="bottom-container">
         <img src="/assets/svg/BluePrint/spotify.svg" alt="" />
         <Line className={'bottom-container-line'}/>
       </div>
+        </a>
+      
     
       </div>
      

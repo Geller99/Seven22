@@ -5,18 +5,18 @@ const Faq = () => {
 
     // faq dummy data 
     const faqData = [
-        {
-            question: 'WHAT IS THE SEVEN22 PROJECT?',
-            answer: 'SEVEN22 PROJECT (SEVEN22) is a digital collection of 7,022 unique NFTs; an invite-only community and collective of elite members who share a community-first mindset and are focused on spreading peace throughout the ecosystem with community giveaways and charitable models.  '
-        },
+        // {
+        //     question: 'WHAT IS THE SEVEN22 PROJECT?',
+        //     answer: 'SEVEN22 PROJECT (SEVEN22) is a digital collection of 7,022 unique NFTs; an invite-only community and collective of elite members who share a community-first mindset and are focused on spreading peace throughout the ecosystem with community giveaways and charitable models.  '
+        // },
         {
             question: 'WHEN IS THE LAUNCH DATE ?',
-            answer: 'The SEVEN22 PROJECTs will be launched on August 22, 2022, with pre-sale members getting priority mint positions'
+            answer: 'The HDN FIGRZ collection will drop on September 7, 2022, with pre-sale members getting priority mint positions.'
         },
         {
-            question: 'WHAT ARE THE SEVEN22 PROJECT REWARDS?',
-            answer: 'When a Seven22 NFT is purchased, the commitment to the community is that 85% of the proceeds from the purchase will be contributed into a dedicated reflections pool for the Seven22 Community via a smart contract. Through the collective contribution that the community creates, a yield is realized, reflecting back to the NFT holders and members of the Seven22 community. The weekly yield is sent out directly to the community through reflections rewards via a smart contract.To learn more about the reflections rewards   -  ',
-            Link: "https://seven22project.io/reflections"
+            question: 'WHAT IS A REFLECTION ?',
+            answer: 'In simplest terms, crypto reflections can be seen as a reward system for holders of a token—in this case, a holder of an NFT. Crypto reflection is a new mechanism that rewards holders of a token/NFT simply for being a holder',
+            // Link: "https://seven22project.io/reflections"
         },
         {
             question: 'WHAT IS CRYPTOCURRENCY',
@@ -32,7 +32,7 @@ const Faq = () => {
         {
             question: 'WHAT IS A NON-FUNGIBLE TOKEN(NFT)?',
             answer: 'A non-fungible token is a unique and non-interchangeable unit of data stored on a digital ledger. NFTs can be used to represent easily-reproducible items such as photos, videos, audio, and other types of digital files as unique items, and use blockchain technology to establish a verified and public proof of ownership. Learn more at CNN - ',
-            Link: "https://www.cnn.com/2021/03/17/business/what-is-nft-meaning-fe-series"
+            Link: "https://youtu.be/MjsQMAd7_SA"
         },
         {
             question: 'WHAT IS ETHEREUM?',
@@ -41,7 +41,7 @@ const Faq = () => {
         },
         {
             question: 'HOW DO I GET A METAMASK ACCOUNT?',
-            answer: "MetaMask is a web browser extension that allows you to manage your Ethereum private keys via your web browser. By doing so, it serves as a wallet for Ether and ERC-20 tokens, and allows you to visit the distributed web of tomorrow in your browser today. To be more specific, it allows you to run Ethereum Dapps (Decentralized Apps) right in your browser without running a full Ethereum node. (In other words, you don't have to download and sync the full blockchain on your device or computer). Our mission is to make Ethereum as easy to use for as many people as possible. What is MetaMask - https://youtu.be/YVgfHZMFFFQ How to install MetaMask on all devices and browsers - ",
+            answer: "Go to https://MetaMask.io and click the “Download” button, which will take you to the relevant store to download the extension or app based on the device and browser you’re using. NOTE: The MetaMask extension is not compatible with Safari Browser. Supported browsers include: Google Chrome, Firefox, and Brave. - ",
             Link: "https://metamask.zendesk.com/hc/en-us/articles/36001548953-Getting-started-with-Meta"
         },
         {
@@ -51,26 +51,26 @@ const Faq = () => {
         },
         {
             question: 'HOW DO I PURCHASE A SEVEN22 PROJECT NFT?',
-            answer: "Watch the loom video below on how to mint your Seven22 NFT! Welcome to the SEVEN22 PROJECTs community! - ",
-            Link: "https://_____________________________________________"
+            answer: "Watch the loom video below on how to mint your Seven22 NFT! COMING SOON!",
+            // Link: ""
         },
         {
             question: 'HOW MANY MINTABLE NFTS ARE THERE?',
             answer: "SEVEN22 PROJECT (Seven22) is a digital collection of 7,022 unique NFTs (non-fungible tokens) that will be minted in multiple releases. "
         },
         {
-            question: 'HOW AND WHEN WILL MY REWARDS BE SENT OUT?',
-            answer: "All available reflections rewards will be sent out weekly. There is a requirement to have a minimum of $500 in reflections to trigger a transfer to your MetaMask wallet. Available Direct reflections Rewards are sent out every week starting on week 7."
+            question: 'WHEN ARE REFLECTIONS SENT OUT?',
+            answer: "Every HDN FIGRZ holder will receive reflections directly into their wallet quarterly"
         },
-        {
-            question: 'HOW DO I TRACK MY REWARDS?',
-            answer: "Discord bot will be the channel where you can check and verify all of your rewards and track your affiliates - ",
-            Link: "https://_______________________________________________"
-        },
+        // {
+        //     question: 'HOW DO I TRACK MY REWARDS?',
+        //     answer: "Discord bot will be the channel where you can check and verify all of your rewards and track your affiliates - ",
+        //     Link: "https://_______________________________________________"
+        // },
         {
             question: 'CAN I PURCHASE OR SELL A SEVEN22 NFT ON OPENSEA?',
-            answer: "Once a person purchases the SEVEN22 PROJECT NFT, all future transactions happen on a secondary market, such as Opensea.io OpenSea is the first and largest peer-to-peer marketplace for cryptogoods (like an eBay for crypto assets), which include collectibles, gaming items, and other virtual goods backed by a blockchain. On OpenSea, anyone can buy or sell these items through a smart contract. Seven22 NFT Holder Verification Process on Discord When you purchase a SEVEN22 PROJECT NFT you will have access to a Special “Holders Space” on Discord. This space will have updates and information only for Seven22 NFT holders - i.e. special pricing, updates, and information - ",
-            Link: "https://_______________________ "
+            answer: "Once a person purchases the SEVEN22 PROJECT NFT, all future transactions happen on a secondary market, such as Opensea.io OpenSea is the first and largest peer-to-peer marketplace for cryptogoods (like an eBay for crypto assets), which include collectibles, gaming items, and other virtual goods backed by a blockchain. On OpenSea, anyone can buy or sell these items through a smart contract.",
+            // Link: "https://_______________________ "
         },
     ]
 
