@@ -48,7 +48,7 @@ const MintSection = () => {
                         </div>
                         <div className="items-footer-heading">
                             <h2>Public Mint</h2>
-                            <h3>August 22 07:22 pm EST</h3>
+                            <h3>9.7.22 7:22 PM EST</h3>
                         </div>
                     </div>
                 </div>
