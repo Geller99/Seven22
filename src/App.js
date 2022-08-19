@@ -2,7 +2,7 @@ import "../src/css/main.scss";
 import { HomePage } from "./components/HomePage";
 import NavBar from "./components/NavBar";
 
-import { browserHistory,BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MintPage from "./pages/MintPage";
 import Terms from "./pages/TermsPage";
 
@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <span style={{ color: 'white' }}>test</span>
-      <Router history={browserHistory}>
+      <Router>
         <NavBar />
         <Routes>
           <Route
