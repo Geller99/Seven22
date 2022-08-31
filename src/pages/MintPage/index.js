@@ -38,7 +38,7 @@ const MintPage = () => {
     const session = React.useMemo(() => {
         const tmp = new EthereumSession({
             chain:                                          network.chain,
-            contractAddress: '0x57cc5DAe2dE72Bf0EC531717553b3fD7B2E70B90',
+            contractAddress: '0x740CD913a2B9f1C888C6B07C1FCfeB8D0CB38ec1',
             contractABI:                                      contractABI
         });
 
@@ -137,15 +137,59 @@ const MintPage = () => {
         connect();
     };
 
+    const handlePresale = async () => {
+        try{
+            if( !(await connect( true )) )
+                return;
+
+            const saleIsActive = await session.contract.methods.paused().call();
+            if(saleIsActive){
+                alert( "Sale is not active" );
+                return;
+            }
+
+            const totalEth = 0;
+            await session.contract.methods.presale( mintQuantity ).estimateGas({
+                from: ethAccount,
+                value: totalEth.toString()
+            });
+
+            await session.contract.methods.presale( mintQuantity ).send({
+                from: ethAccount,
+                value: totalEth.toString()
+            });
+
+            alert( "Mint Successful" );
+        }
+        catch( err ){
+            const ethError = EthereumSession.getError( err );
+            if( ethError.code === 4001 ){
+                alert( "Please try again and confirm the transaction" );
+            }
+            else if( ethError.message ){
+                let message = ethError.message;
+                if( message.includes( "greedy" ) )
+                    message = "Only 1 per wallet";
+                else if( message.includes( "Returned values aren't valid" ) )
+                    message = `Please switch your wallet to the '${network.name}' network`;
+
+                alert( message );
+            }
+            else{
+                alert( ethError );
+            }
+        }
+    }
+
     const handleMint = async () => {
         try{
             if( !(await connect( true )) )
                 return;
 
 
-            const saleIsActive = await session.contract.methods.saleIsActive().call();
-            if( !saleIsActive ){
-                alert( "Sale is not addive" );
+            const saleIsActive = await session.contract.methods.paused().call();
+            if( saleIsActive ){
+                alert( "Sale is not active" );
                 return;
             }
 
@@ -153,17 +197,17 @@ const MintPage = () => {
             // const MAX_APES = await session.contract.methods.MAX_APES().call();           
             // const maxApePurchase = await session.contract.methods.maxApePurchase().call();
 
-            const apePrice = await session.contract.methods.apePrice().call();
-            const price = window.BigInt( apePrice.toString() );
+            const sevenPrice = await session.contract.methods.publicPrice().call();
+            const price = window.BigInt( sevenPrice.toString() );
             const quantity = window.BigInt( mintQuantity );
             const totalEth = price * quantity;
 
-            await session.contract.methods.mintApe( mintQuantity ).estimateGas({
+            await session.contract.methods.mint( mintQuantity ).estimateGas({
                 from: ethAccount,
                 value: totalEth.toString()
             });
 
-            await session.contract.methods.mintApe( mintQuantity ).send({
+            await session.contract.methods.mint( mintQuantity ).send({
                 from: ethAccount,
                 value: totalEth.toString()
             });
@@ -198,10 +242,14 @@ const MintPage = () => {
 
     const render = () => {
         let handler = handleConnect;
+        let preSaleHandler = handleConnect;
         let buttonText = "Connect wallet";
+        let preSaleButton = "Presale Connect";
         if( ethAccount ){
             handler = handleMint;
+            preSaleHandler = handlePresale;
             buttonText = "Mint";
+            preSaleButton = "Claim Presale";
             //"Connected: "+ ethAccount.substr( 0, 6 ) +'...'+ ethAccount.substr( 38 );
         }
 
@@ -231,16 +279,23 @@ const MintPage = () => {
                         <div className="mint-buttons">
                             <div className="number-incrementor">
                                 <InputNumber mintQuantity={mintQuantity} setMintQuantity={setMintQuantity} />
-                                <div className="input-btn-line-1"></div>
-                                <div className="input-btn-line-2"></div>
+                                {/* <div className="input-btn-line-1"></div>
+                                <div className="input-btn-line-2"></div> */}
                             </div>
 
                             <div className="mint-now-btn" onClick={handler}>
-                                <div className="mint-btn-line-top-right-1"></div>
-                                <div className="mint-btn-line-top-right-2"></div>
+                                {/* <div className="mint-btn-line-top-right-1"></div>
+                                <div className="mint-btn-line-top-right-2"></div> */}
                                 <span>{buttonText}</span>
-                                <div className="mint-btn-line-1"></div>
-                                <div className="mint-btn-line-2"></div>
+                                {/* <div className="mint-btn-line-1"></div>
+                                <div className="mint-btn-line-2"></div> */}
+                            </div>
+                            <div className="mint-now-btn" onClick={preSaleHandler}>
+                                {/* <div className="mint-btn-line-top-right-1"></div>
+                                <div className="mint-btn-line-top-right-2"></div> */}
+                                <span>{preSaleButton}</span>
+                                {/* <div className="mint-btn-line-1"></div>
+                                <div className="mint-btn-line-2"></div> */}
                             </div>
                         </div>
                         <MintSlider />
