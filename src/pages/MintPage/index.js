@@ -10,6 +10,7 @@ import MintSlider from './Components/mint-Carosule';
 import EthereumSession from '../../lib/eth-session';
 import contractABI from '../../lib/contract-abi';
 
+const merkleClass = require('../../lib/merkle');
 //mainnet
 /*
 const network = {
@@ -138,9 +139,23 @@ const MintPage = () => {
     };
 
     const handlePresale = async () => {
+      
+    //   await contract.estimateGas.presale( proof, account.alloc, amount );
+    //   await contract.presale( proof, account.alloc, amount );
+
         try{
             if( !(await connect( true )) )
                 return;
+
+            const merkle = new merkleClass();
+            const account = merkle.getAccount( ethAccount );
+                if( !account ){
+                  alert( "No claims" );
+                  return;
+                }
+          
+                const amount = mintQuantity;
+                const proof = merkle.tree.getHexProof( account.leaf );
 
             const saleIsActive = await session.contract.methods.paused().call();
             if(saleIsActive){
@@ -149,12 +164,13 @@ const MintPage = () => {
             }
 
             const totalEth = 0;
-            await session.contract.methods.presale( mintQuantity ).estimateGas({
+            await session.contract.methods.presale( proof, account.alloc, amount ).estimateGas({
                 from: ethAccount,
                 value: totalEth.toString()
             });
-
-            await session.contract.methods.presale( mintQuantity ).send({
+ 
+            
+            await session.contract.methods.presale(proof, account.alloc, amount).send({
                 from: ethAccount,
                 value: totalEth.toString()
             });
@@ -223,7 +239,7 @@ const MintPage = () => {
                 let message = ethError.message;
                 if( message.includes( "greedy" ) )
                     message = "Only 1 per wallet";
-                else if( message.includes( "Returned values aren't valid" ) )
+                else if( message.includes( "Returned values a=/ren't valid" ) )
                     message = `Please switch your wallet to the '${network.name}' network`;
 
                 alert( message );

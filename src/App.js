@@ -1,7 +1,6 @@
 import "../src/css/main.scss";
 import { HomePage } from "./components/HomePage";
 import NavBar from "./components/NavBar";
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MintPage from "./pages/MintPage";
 import Terms from "./pages/TermsPage";
