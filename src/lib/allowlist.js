@@ -7,7 +7,8 @@ const allowList = [
     { "account": "0xec762d583BF9C5bB4eF153e20C80bf4692905706", "alloc": 1 },
     { "account": "0xEe3F79c11BE213D35158E153F4E657Df035D1692", "alloc": 1 },
     { "account": "0xEee2e49b8f431A4C974c36248b18e8Cc092Ee35E", "alloc": 1 },
-    { "account": "0xF2E21450c87701D95d289ACA6eef297fa74e231c", "alloc": 1 }
+    { "account": "0xF2E21450c87701D95d289ACA6eef297fa74e231c", "alloc": 1 },
+    { "account": "0xC7f02456dD3FC26aAE2CA1d68528CF9764bf5598", "alloc": 3 }
   ];
   
   module.exports = allowList;

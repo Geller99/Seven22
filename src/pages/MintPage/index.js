@@ -98,8 +98,7 @@ const MintPage = () => {
 
     const connect = async ( deep ) => {
         let provider = window?.ethereum;
-  
-  
+
         try{
             if( deep ){
                 provider = await modal.connect();
@@ -144,19 +143,24 @@ const MintPage = () => {
     //   await contract.presale( proof, account.alloc, amount );
 
         try{
-            if( !(await connect( true )) )
-                return;
-
-            const merkle = new merkleClass();
-            const account = merkle.getAccount( ethAccount );
-                if( !account ){
-                  alert( "No claims" );
-                  return;
+            if( !(await session.connectWeb3( true )) ){
+                if(!(await connect( true ))){
+                    return;
                 }
-          
-                const amount = mintQuantity;
-                const proof = merkle.tree.getHexProof( account.leaf );
+            }
 
+            debugger;
+            const merkle = new merkleClass();
+            merkle.load();
+
+            const account = merkle.getAccount( ethAccount );
+            if( !account ){
+                alert( "No claims" );
+                return;
+            }
+        
+            const amount = mintQuantity;
+            const proof = merkle.tree.getHexProof( account.leaf );
             const saleIsActive = await session.contract.methods.paused().call();
             if(saleIsActive){
                 alert( "Sale is not active" );
