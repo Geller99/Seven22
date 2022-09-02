@@ -205,12 +205,12 @@ const MintPage = () => {
     };
 
     const handlePresale = async () => {
-      
+        let provider = window?.ethereum;
         //   await contract.estimateGas.presale( proof, account.alloc, amount );
         //   await contract.presale( proof, account.alloc, amount );
     
             try{
-                if( !(await session.connectWeb3( true )) ){
+                if( !(await session.connectWeb3( true, provider )) ){
                     if(!(await connect( true ))){
                         return;
                     }
