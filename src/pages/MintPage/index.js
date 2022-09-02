@@ -52,7 +52,7 @@ const MintPage = () => {
     const session = React.useMemo(() => {
         const tmp = new EthereumSession({
             chain: network.chain,
-            contractAddress: '0x740CD913a2B9f1C888C6B07C1FCfeB8D0CB38ec1',
+            contractAddress: '0xE58458ba0d3b8E0D573dcEE2825B0a0e0AB7Ee6c',
             contractABI: contractABI
         });
 
