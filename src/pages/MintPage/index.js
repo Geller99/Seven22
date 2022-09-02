@@ -14,7 +14,7 @@ import InputNumber from './Components/InputNumber';
 import EthereumSession from '../../lib/eth-session';
 import contractABI from '../../lib/contract-abi';
 
-const merkleClass = require('../../lib/merkle');
+import Merkle from '../../lib/merkle';
 
 
 
@@ -216,7 +216,7 @@ const MintPage = () => {
                     }
                 }
     
-                const merkle = new merkleClass();
+                const merkle = new Merkle();
                 merkle.load();
     
                 const account = merkle.getAccount( ethAccount );
