@@ -105,7 +105,7 @@ const TeamCard = () => {
                 </div>
                 <div className="right-container">
                     <div className="heading">
-                        <h3>Humblinglivingg Art projexts</h3>
+                        <h3>Humblelivingg Art Projexts</h3>
                         <h3> <span>Role </span>  - ARTIST</h3>
                     </div>
                     <div className="desc">
