@@ -45,4 +45,4 @@ class Merkle{
   }
 }
 
-module.exports = Merkle;
+export default Merkle;
