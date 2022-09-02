@@ -349,8 +349,8 @@ const MintPage = () => {
                         <div className="mint-buttons">
                             <div className="number-incrementor">
                                 <InputNumber mintQuantity={mintQuantity} setMintQuantity={setMintQuantity} />
-                                <div className="input-btn-line-1"></div>
-                                <div className="input-btn-line-2"></div>
+                                {/* <div className="input-btn-line-1"></div>
+                                <div className="input-btn-line-2"></div> */}
                             </div>
 
                             <div className="mint-now-btn" onClick={handler}>
