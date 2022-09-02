@@ -1,0 +1,110 @@
+.card-slider-section {
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 70px;
+    position: relative;
+    padding: 0px 24px;
+
+    &.mobile {
+        display: none;
+
+        @media(max-width: 767px) {
+            display: block;
+        }
+    }
+
+
+    .card-slider-main {
+        width: 100%;
+        position: relative;
+
+        .access-points {
+            min-height: 104px;
+        }
+
+        .primary-slide {
+            width: 100%; // setup media query for other
+            position: relative;
+            z-index: 2;
+        }
+
+
+        .hidden-slide {
+            display: none;
+            visibility: hidden;
+            position: absolute;
+        }
+
+        .slide-item {
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .toggle-btn {
+            background-color: #474747;
+            height: 56px;
+            width: 56px;
+            border: 1px solid #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: absolute;
+            z-index: 4;
+            top: calc(50% - 28px);
+
+            .rotated {
+                transform: rotate(-180deg);
+            }
+
+            @media(max-width: 768px) {
+                height: 32px;
+                width: 32px;
+                top: calc(50% - 13.71px);
+                img {
+                    height: 13.71px;
+                    width: 13.71px;
+                }
+            }
+        }
+
+        .toggle-btn-1 {
+
+            @media(max-width:768px) {
+                left: -16px;
+            }
+        }
+
+        .toggle-btn-2 {
+            @media(max-width:768px) {
+                right: -16px;
+            }
+        }
+    }
+    .nav-dots{
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .slide-dots{
+            height: 4px;
+            width: 16px;
+            border-radius: 8px;
+            margin-right: 8px;
+            transition: 0.2s ease-in-out;
+            &.primary-slide{
+                width: 56px;
+                background-color: #FBD660;
+            }
+            &.hidden-slide{
+                background-color: #3D3D3D;
+            }
+        }
+    }
+
+}

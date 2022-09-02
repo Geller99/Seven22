@@ -1,0 +1,101 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-background-primary: #1E1E1E;
+    --color-background-secondary: #050505;
+    --color-gray-text: #BDBBBB;
+    --color-white: #ffffff;
+}
+
+
+@font-face {
+    font-family: "Primal";
+    src: local("Primal"),
+        //   url(../assets/fonts/EuclidCircularA-Regular.woff) format("woff");
+        url(../assets/fonts/primal/Primal-Webfont.woff) format("woff"),
+        url(../assets/fonts/primal/Primal.otf) format("otf"),
+
+}
+
+@font-face {
+    font-family: "Euclid Circular A";
+    src: local("Euclid Circular A"),
+
+       url(../assets/fonts/euclid-circular-a/EuclidCircularA-Regular.woff) format("woff");
+}
+
+@font-face {
+    font-family: 'Code Next';
+    src: url(../assets/fonts/code-next/Code-Next-ExtraBold.woff) format("woff"),
+        url(../assets/fonts/code-next/Code-Next-ExtraBold-Italic.otf) format("otf"),
+
+}
+
+@font-face {
+    font-family: 'Codevein';
+    src: url(../assets/fonts/codevein/Codevein.otf) format("otf"),
+        url(../assets/fonts/codevein/Codevein.ttf) format("ttf"),
+        url(../assets/fonts/codevein/Codevein.woff) format("woff")
+}
+
+
+@font-face {
+    font-family: "Stargaze";
+    src: local("Stargaze"),
+        url(../assets/fonts/stargaze/Stargaze-Regular.woff) format("woff");
+}
+
+
+
+
+body {
+    // font-family: "EuclidCircularA";
+    background-color: #050505;
+    font-size: 16px;
+
+    // h1 {
+    //     font-size: 48px !important;
+    // }
+
+    // h2 {
+    //     font-size: 40px !important;
+    // }
+
+    // @media screen and (max-width: 900px) {
+    //     h1 {
+    //         font-size: 40px !important;
+    //     }
+
+    //     h2 {
+    //         font-size: 40px !important;
+    //     }
+    // }
+
+    // @media screen and (max-width: 500px) {
+    //     h1 {
+    //         font-size: 24px !important;
+    //     }
+
+    //     h2 {
+    //         font-size: 24px !important;
+    //     }
+    // }
+}
+
+.App {
+    overflow-x: hidden;
+}
+
+.link-class{
+    text-decoration: none;
+}

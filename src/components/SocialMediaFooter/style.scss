@@ -1,0 +1,54 @@
+.copyright-top-line {
+    opacity: 0.5;
+    border: 1px solid #707070;
+}
+
+.copyright-container {
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // mobile media query
+    @media (max-width: 576px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text-container {
+        p {
+            font-family: 'Code Next', sans-serif;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 150%;
+            color: #707070;
+
+            // mobile media query
+            @media (max-width: 576px) {
+                text-align: center;
+                font-weight: 800;
+                font-size: 12px;
+                line-height: 150%;
+            }
+        }
+    }
+
+    .social-icon-container {
+        display: flex;
+
+        .social-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: var(--color-white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10px;
+        }
+    }
+}

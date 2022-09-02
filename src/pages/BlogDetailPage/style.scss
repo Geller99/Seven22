@@ -1,0 +1,150 @@
+.blog-detail-page-container {
+
+    margin-top: 104px;
+
+
+    color: #fff;
+    position: relative;
+    min-height: 100vh;
+    border: 0.1px solid transparent;
+
+    padding: 0px 5%;
+    padding-top: 88px;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media(max-width:768px) {
+        min-height: unset;
+    }
+
+    .thumbnail {
+        position: relative;
+        border-radius: 24px;
+        margin-bottom: 40px;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+            z-index: 1;
+        }
+
+        .layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: inherit;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+            z-index: 2;
+        }
+
+        .info {
+            position: absolute;
+            bottom: 2.6vw;
+            left: 2.6vw;
+            right: 2.6vw;
+            z-index: 3;
+
+            .heading {
+                font-family: 'Euclid Circular A';
+                font-style: normal;
+                font-weight: 500;
+                font-size: clamp(18px, 1.7vw, 24px);
+
+                line-height: 175%;
+                /* identical to box height, or 42px */
+
+                text-align: justify;
+                letter-spacing: 0.02em;
+
+                color: #FFFFFF;
+            }
+
+            .date {
+                font-family: 'Euclid Circular A';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 175%;
+                /* identical to box height, or 28px */
+
+                text-align: justify;
+                letter-spacing: 0.02em;
+
+                color: #FFFFFF;
+
+                opacity: 0.6;
+            }
+        }
+    }
+
+    .author {
+        font-family: 'Euclid Circular A';
+        font-style: italic;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 175%;
+        /* identical to box height, or 32px */
+
+        text-align: justify;
+        letter-spacing: 0.02em;
+
+        color: #FFFFFF;
+
+        opacity: 0.75;
+        margin-bottom: 17px;
+    }
+
+    .content {
+        width: 100%;
+
+        font-family: 'Euclid Circular A';
+
+        figure:nth-child(1) {
+            // Hide the thumbnail image, make custom use
+            display: none;
+            // width: 100%;
+            // border-radius: 24px;
+            // margin-bottom: 40px;
+            // img {
+            //     width: 100%;
+            //     border-radius: inherit;
+            // }
+        }
+
+        figure {
+            width: 100%;
+         
+            justify-content: center;
+            margin: 20px 0px;
+
+            img {
+                width: inherit;
+            }
+        }
+
+        p {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 175%;
+            /* or 32px */
+
+            text-align: justify;
+            letter-spacing: 0.02em;
+
+            color: #FFFFFF;
+
+            opacity: 0.75;
+
+            margin-bottom: 16px;
+        }
+
+        a {
+            color: #fff;
+        }
+    }
+}

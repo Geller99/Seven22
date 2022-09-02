@@ -1,0 +1,265 @@
+.treasure-page-container {
+    #treasure-rewards {
+        padding-top: 100px;
+        margin-top: -100px;
+        -webkit-background-clip: content-box;
+        background-clip: content-box;
+    }
+
+    .treasure-landing-page-container {
+        height: calc(100vh);
+        padding-top: 200px;
+        padding-bottom: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../../assets/images/Treasures-page/treasurte-bg-deskstop.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        .img-wrapper {
+
+            position: relative;
+            width: 19.84vw;
+
+            @media (max-width:768px) {
+                width: 34vw;
+            }
+
+            @media (max-width:426px) {
+                width: 64.10vw;
+            }
+
+            img {
+                width: 100%;
+                cursor: pointer;
+            }
+
+
+        }
+
+        .dialog-box {
+            position: absolute;
+            bottom: 38%;
+            left: 35%;
+            height: 182px;
+            max-width: 484px;
+            width: 52vw;
+            
+
+            @media (max-width:426px) {
+                position: relative;
+                bottom: unset;
+                left: unset;
+                height: unset;
+                max-width: unset;
+                width: 100%;
+                margin-bottom: 56px;
+            }
+
+
+
+            .outer-circle {
+                opacity: 0;
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+                width: 30px;
+                height: 30px;
+                border: 1px solid #FFFFFF;
+
+                border-radius: 50%;
+                
+                transition: 0.3s ease-in;
+                // padding: 20px;
+                // text-align: center;
+                @media (max-width:426px) {
+                    display: none;
+                }
+                .circle {
+                    position: absolute;
+                    left: 4px;
+                    bottom: 4px;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 100px;
+                    -webkit-border-radius: 100px;
+                    -moz-border-radius: 100px;
+                    -ms-border-radius: 100px;
+                    -o-border-radius: 100px;
+                    background: white;
+
+
+
+                    @media (max-width:426px) {
+                        display: none;
+                    }
+
+                }
+            }
+
+            .line-vertical {
+                position: absolute;
+                left: 8px;
+                bottom: 4px;
+                display: block;
+                width: 0%;
+                transition: 0.3s ease-in;
+                transition-delay: 0.3s;
+                @media (max-width:426px) {
+                    display: none;
+                }
+
+            }
+
+            .click-to-see-alert {
+                opacity: 0;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                // transform: translate(50%, -50%);
+                background: #fff;
+                padding: 10px;
+
+                font-family: "Code Next";
+                font-style: normal;
+                font-weight: 800;
+                font-size: 14px;
+                line-height: 150%;
+
+                transition: 0.5s ease-in;
+                transition-delay: 0.3s;
+
+                @media (max-width:426px) {
+                    position: relative;
+                    right: unset;
+                    top: unset;
+                }
+            }
+            &.active{
+                .outer-circle{
+                    opacity: 1;
+                }
+                .line-vertical {
+                    width: 171px;
+                }
+                .click-to-see-alert {
+                    opacity: 1;
+                }
+            }
+        }
+
+
+    }
+}
+
+
+// TreasureCard
+.TreasureCard-container {
+    color: #fff;
+
+    padding-bottom: 120px;
+
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+
+    .TreasureCard-wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        .card-number-indicator {}
+
+        .card-img-wrapper {
+            background: #0E0E0E;
+            border: 0.492505px solid #000000;
+            border-radius: 11.8201px;
+            padding: 33px 65px;
+            position: relative;
+
+            img {
+                // width: 100%;
+            }
+
+            @media (max-width: 768px) {
+                padding: 33px 29px;
+                margin-left: 10px;
+                margin-right: 10px;
+
+                img {
+                    width: 85%;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            @media (max-width:568px) {
+                padding: 30px 29px;
+
+                img {
+                    width: 92%;
+                }
+            }
+
+            .top-right-polygon-effect {
+                position: absolute;
+                background: #050505;
+                width: 100px;
+                height: 100px;
+                transform: rotate(45deg);
+                top: -54px;
+                right: -62px;
+            }
+        }
+
+        .card-title {
+            font-family: 'Euclid Circular A';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 150%;
+            /* identical to box height, or 27px */
+
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.02em;
+
+            color: #FFFFFF;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            max-width: 600px;
+
+
+            @media (max-width:568px) {
+                font-weight: 700;
+                font-size: 14px;
+                max-width: 327px;
+                padding: 0 10px;
+            }
+        }
+
+        .footer-horizontal-line {
+            border: 1px solid #FBD660;
+            width: 80px;
+            margin-top: 43px;
+            margin-bottom: 33px;
+            box-shadow: 0px 0px 32px rgba(251, 249, 240, 0.4), inset 0px 53px 24px rgba(255, 253, 253, 0.1);
+            transform: rotate(-90deg);
+
+            @media (max-width:568px) {
+                width: 65px;
+                margin-top: 32px;
+                margin-bottom: 24px;
+            }
+        }
+    }
+}

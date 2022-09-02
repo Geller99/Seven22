@@ -1,0 +1,299 @@
+.homepage {
+    // not adding gradient in background , unable to extract image from UI design which doesn't include gradient 
+    background: url('../../assets/images/Rectangle 2.png') no-repeat center center/cover;
+
+    position: relative;
+    min-height: 649px;
+    height: calc(100vh);
+    border: 0.1px solid transparent;
+
+    @media(max-width:768px) {
+        min-height: unset;
+    }
+
+    .homepage-inner-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: inherit;
+        padding: 0px;
+        gap: 16px;
+        position: relative;
+        padding-bottom: clamp(10px, 10%, 248px);
+        @media(max-width:768px) {
+            
+        }
+
+        .homepage-heading {
+            font-size: 112px;
+            line-height: 105px;
+            color: rgba(255, 255, 255, 1);
+            font-family: 'Codevein', sans-serif;
+            text-shadow: 0px 0px 32px rgba(251, 249, 240, 0.4);
+          
+
+            span {
+                color: #FBD660;
+               
+            }
+
+            @media (min-width:768px) and (max-width: 909px) {
+                font-size: 94px;
+            }
+
+            @media(max-width: 768px) {
+
+                font-size: 40px;
+                line-height: 37px;
+            }
+        }
+
+        .homepage-subheading {
+            font-size: 32px;
+            line-height: 37px;
+            letter-spacing: 0.25em;
+            font-family: 'Primal';
+            color: #FFFFFF;
+            text-align: center;
+
+            @media(max-width: 768px) {
+                font-size: 14px;
+                line-height: 16px;
+            }
+
+        }
+
+        .homepage-btns {
+
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            padding: 0px;
+            gap: 42px;
+            position: relative; 
+            top: 40px;
+
+            @media(max-width:768px) {
+                flex-direction: column;
+                align-items: center;
+                top: 31px;
+                gap: 40px;
+            }
+
+            .line-pair {
+                position: absolute;
+
+
+                div {
+                    border: 1px solid rgba(253, 242, 206, 1);
+                    height: 64px;
+
+                    @media(max-width:768px) {
+                        height: 48px;
+                    }
+                }
+
+                :nth-child(2) {
+                    transform: rotate(90deg);
+                    position: relative;
+                    top: -42px;
+                    left: 10px;
+
+                }
+            }
+
+            .lp-rotated {
+                transform: rotate(180deg);
+            }
+
+            .explore {
+                position: relative;
+
+
+                .lp-bottom {
+                    top: 10px;
+                    left: -10px;
+
+                    @media(max-width:768px) {
+                        top: 22px;
+                        left: -5px;
+
+                    }
+
+                }
+
+                p {
+                    width: 146px;
+                    height: 56px;
+                    border: 1px solid rgba(253, 242, 206, 1);
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
+                    font-size: 18px;
+                    line-height: 26px;
+                    color: #FBD660;
+                    font-weight: 800;
+                    font-family: 'Code Next', sans-serif;
+                    cursor: pointer;
+
+                    @media(max-width: 768px) {
+                        height: 48px;
+                        font-size: 16px;
+                        line-height: 23px;
+                    }
+
+                }
+
+            }
+
+            .mintnow {
+                position: relative;
+                box-shadow: 0px 0px 32px 5px rgba(251, 249, 240, 0.4), inset 0px 53px 24px rgba(255, 253, 253, 0.1);
+
+                .lp-bottom {
+                    top: 10px;
+                    left: -10px;
+
+                    @media(max-width:768px) {
+                        top: 22px;
+                        left: -5px;
+
+                    }
+
+
+                }
+
+                .lp-top {
+                    bottom: 10px;
+                    right: -10px;
+
+                    @media(max-width:768px) {
+                        bottom: 22px;
+                        right: -5px;
+
+                    }
+                }
+
+                p {
+                    width: 193px;
+                    background: #FBD660;
+                    height: 56px;
+                    color: #111111;
+                    font-weight: 800;
+                    font-size: 18px;
+                    line-height: 26px;
+                    font-family: 'Code Next', sans-serif;
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
+                    cursor: pointer;
+
+                    @media(max-width: 768px) {
+                        height: 48px;
+                        box-shadow: 0px 0px 32px 24px rgba(251, 249, 240, 0.15), inset 0px 53px 24px rgba(255, 253, 253, 0.1);
+                        font-size: 16px;
+                        line-height: 23px;
+                    }
+
+                }
+
+            }
+        }
+
+    }
+}
+
+.scroll-container {
+    position: absolute;
+    z-index: 2;
+    bottom: clamp(10px, 4%, 102.67px);
+    left: calc(50vw - 160.52px/2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+
+    height: 77px;
+    cursor: pointer;
+
+    @media(max-width:768px) {
+        left: calc(50vw - 120.39px/2);
+
+    }
+
+    @media(max-width:576px) {
+
+        height: 44px;
+
+
+    }
+
+    .scroll-heading {
+        font-weight: 800;
+        font-family: 'Code Next', sans-serif;
+        font-size: 16px;
+        line-height: 23px;
+        color: #707070;
+
+        @media(max-width:576px) {
+            font-size: 12px;
+
+        }
+
+    }
+
+    img {
+        width: 64.95px;
+        height: 30px;
+
+        @media(max-width:576px) {
+            width: 32px;
+            height: 18px;
+
+        }
+
+    }
+}
+
+.homepage-mobile-presale {
+    display:none;
+    color: white;
+
+    @media(max-width:576px) {
+        display: flex;
+        color: white;
+        transform: translateY(-80px);
+        font-family: Code Next,sans-serif;
+
+    }
+
+    @media (min-width: 576px) and (max-width:768px) {
+        display: flex;
+        color: white;
+        transform: translateY(-120px);
+        font-family: Code Next,sans-serif;
+    }
+
+    @media (min-width: 576px) and (max-width:1200px) {
+        display: flex;
+        color: white;
+        transform: translateY(-50px);
+        font-family: Code Next,sans-serif;
+    }
+
+
+
+    a {
+        color: #FBD660;
+    }
+}
+
+.Explore-btn-list {
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}

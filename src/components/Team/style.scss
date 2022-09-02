@@ -1,0 +1,419 @@
+.team-section {
+
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: var(--color-background-secondary);
+    position: relative;
+
+
+    // mobile media query
+    @media (max-width: 576px) {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 0px;
+    }
+
+    .team-heading {
+        // border: 2px solid green;
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: 8.67px;
+        left: 70px;
+        z-index: 10;
+
+        @media(max-width:1200px) {
+            position: unset;
+            margin-top: 0px;
+            margin-left: 24px;
+        }
+
+        .heading-name {
+            font-family: 'Primal';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 80px;
+            line-height: 92px;
+            color: #FFFFFF;
+
+            min-width: 520px;
+
+            @media(max-width:768px) {
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 37px;
+                min-width: 220px;
+
+            }
+        }
+
+        .dotted-line {
+
+            position: relative;
+            left: -10px;
+
+            @media(max-width: 768px) {
+                left: -0px;
+            }
+        }
+
+
+    }
+
+    .team-wrapper-body {
+        .solid-header-bottom-line {
+            border: 1px solid #707070;
+            width: 70%;
+            margin-top: 35px;
+            opacity: 0.3;
+            margin-left: -20px;
+
+            // mobile media query
+            @media (max-width: 576px) {
+                display: none;
+            }
+        }
+    }
+}
+
+// team card 
+.team-card-wrapper {
+    max-width: 1400px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--color-white);
+    position: relative;
+
+    //mobile media query
+    @media (max-width: 576px) {
+        margin-top: 60px;
+    }
+
+    .big-line {
+        position: relative;
+        transform: rotate(90deg);
+        width: 2200px;
+        height: 1px;
+        opacity: 0.3;
+        background-color: #FFFFFF;
+        bottom: -1337px;
+        left: -280px;
+
+        // tablet media query
+        @media (max-width: 768px) {
+            bottom: -1106px;
+            left: -231px;
+        }
+    }
+
+    .team-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 200px;
+
+
+
+
+        // mobile media query
+        @media (max-width: 576px) {
+            flex-direction: column;
+            margin-bottom: 100px;
+
+            // last child
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+
+
+        .left-container {
+            border: 1px solid #FFFFFF;
+            padding: 10px;
+            margin-right: 40px;
+            position: relative;
+            background: #070506;
+
+            @media (max-width: 576px) {
+                margin-right: 0;
+            }
+
+            img {
+                width: 284px;
+                height: 357px;
+                margin: 0 auto;
+
+                @media (max-width: 768px) {
+                    width: 200px;
+                    height: 250px;
+                }
+
+                @media (max-width: 576px) {
+                    // width: 60vw;
+                    // height: 60vw;
+                    // width: 222.1px;
+                    // height: 222.78px;
+                    // object-fit: cover;
+
+                }
+
+            }
+
+            // mobile media query
+            @media (max-width: 576px) {
+                margin-bottom: 50px;
+            }
+
+
+            .line-1 {
+                position: absolute;
+                bottom: -27px;
+                right: -63px;
+                width: 178px;
+                height: 1px;
+                background-color: #FFFFFF;
+                opacity: 0.3;
+
+                // mobile media query
+                @media (max-width: 576px) {
+                    left: -73px;
+                    top: -17px;
+                }
+
+
+            }
+
+            .line-2 {
+                position: absolute;
+                bottom: 21px;
+                /* left: 84px; */
+                right: -116px;
+                width: 178px;
+                height: 1px;
+                background-color: #FFFFFF;
+                opacity: 0.3;
+                transform: rotate(90deg);
+
+
+                // mobile media query
+                @media (max-width: 576px) {
+                    left: -112px;
+                    top: 39px;
+                    width: 78%;
+                }
+            }
+
+            // bottom left lines
+            .bottom-left-line-1 {
+                position: absolute;
+                bottom: -27px;
+                left: -63px;
+                width: 178px;
+                height: 1px;
+                background-color: #FFFFFF;
+                opacity: 0.3;
+
+                // mobile media query
+                @media (max-width: 576px) {
+                    left: -62px;
+                    top: -17px;
+                    width: 155px;
+                }
+
+            }
+
+            .bottom-left-line-2 {
+                position: absolute;
+                bottom: 21px;
+                /* left: 84px; */
+                left: -116px;
+                width: 178px;
+                height: 1px;
+                background-color: #FFFFFF;
+                opacity: 0.3;
+                transform: rotate(90deg);
+
+                // mobile media query
+                @media (max-width: 576px) {
+                    left: -113px;
+                    top: 22px;
+                    width: 76%;
+
+                }
+            }
+
+        }
+
+        .right-container {
+            width: 500px;
+            padding: 20px;
+            margin-left: 20px;
+
+            // tablet media query
+            @media (max-width: 768px) {
+                width: calc(60vw + 23px);
+                padding: 0;
+                margin-left: 0;
+            }
+
+            .heading {
+                h3 {
+                    font-weight: 400;
+                    font-size: 40px;
+                    line-height: 46px;
+                    text-transform: uppercase;
+                    padding-bottom: 10px;
+                    font-family: "primal", sans-serif;
+
+                    @media (max-width: 768px) {
+                        font-size: 30px;
+                        line-height: 36px;
+                    }
+
+                    @media (max-width: 576px) {
+                        font-size: 24px;
+                        line-height: 28px;
+                    }
+
+                    span {
+                        color: #707070;
+                    }
+                }
+            }
+
+            .desc {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 150%;
+                color: var(--color-gray-text);
+                margin-top: 10px;
+                font-family: "Euclid Circular A", sans-serif;
+
+                @media (max-width: 768px) {
+                    font-size: 16px;
+                    line-height: 150%;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 12px;
+                    line-height: 150%;
+                }
+            }
+
+            .social-media {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                background-color: var(--color-white);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+        }
+    }
+}
+
+// gradient line
+
+.team-effects {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -99;
+    // overflow: hidden;
+
+    // tablet media query
+    @media (max-width: 768px) {
+        display: none;
+    }
+
+    display: block;
+
+    .ellipse-16 {
+        position: absolute;
+        aspect-ratio: 1;
+        width: 50.85%;
+        right: -400px;
+        top: 26.61vh;
+        background: #D32E9B;
+        opacity: 0.3;
+        filter: blur(400px);
+        -webkit-filter: blur(400px);
+    }
+
+    .ellipse-15 {
+        position: absolute;
+        aspect-ratio: 1;
+        width: 50.85%;
+        left: -400px;
+        top: 120vh;
+        background: #D32E9B;
+        opacity: 0.2;
+        filter: blur(400px);
+        -webkit-filter: blur(400px);
+    }
+
+    .ellipse-20 {
+        position: absolute;
+        aspect-ratio: 1;
+        width: 50.85%;
+        right: -400px;
+        top: 190vh;
+
+        background: #D32E9B;
+        opacity: 0.2;
+        filter: blur(400px);
+        -webkit-filter: blur(400px);
+    }
+
+    .ellipse-18 {
+        position: absolute;
+        aspect-ratio: 1;
+        width: 50.85%;
+        left: -400px;
+        top: 251vh;
+        background: #DE6D74;
+        opacity: 0.1;
+        filter: blur(250px);
+        -webkit-filter: blur(400px);
+    }
+}
+
+.circle-box {
+
+    position: absolute;
+    left: 0px;
+    top: -20px;
+
+
+
+    :nth-child(2) {
+        position: relative;
+        top: 51px;
+        left: -67px;
+
+        @media(max-width:768px) {
+            top: 26px;
+            left: -56px;
+        }
+
+    }
+
+    @media(max-width: 768px) {
+        img {
+            height: 60px;
+            width: 60px;
+        }
+    }
+}

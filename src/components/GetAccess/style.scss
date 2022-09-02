@@ -1,0 +1,297 @@
+.get-access {
+    color: #fff;
+    padding-top: 107px;
+    padding-bottom: 54px;
+
+    .heading-section {
+        position: relative;
+        z-index: 2;
+
+        .main-heading {
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+            .seperator {
+                position: absolute;
+                top: 33%;
+                opacity: 0.3;
+                background-color: #FFFFFF;
+                height: 1px;
+                width: calc(50% - 24px - 313px);
+
+                &.left {
+                    left: 0;
+                }
+
+                &.right {
+                    right: 0;
+                }
+                @media(max-width:768px) {
+                    top: 31%;
+                    width: calc(50% - 24px - 209px);
+                }
+                @media(max-width:426px) {
+                    top: 21%;
+                    width: calc(50% - 24px - 117px);
+                }
+                
+            }
+
+            .name {
+                .main {
+                    text-align: center;
+                    font-family: 'Primal';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: clamp(32px, 6.6vw, 80px);
+                    line-height: clamp(37px, 6.6vw, 92px);
+                    /* identical to box height */
+
+
+                    color: #FFFFFF;
+                }
+
+                .sub {
+                    font-family: 'Euclid Circular A';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: clamp(12px, 1.6vw, 16px);
+                    line-height: 150%;
+                    /* or 24px */
+
+                    text-align: center;
+                    letter-spacing: 0.02em;
+
+                    color: #FFFFFF;
+
+                    opacity: 0.8;
+
+                    @media(max-width:767px) {
+                        padding: 0px 52px;
+                    }
+                }
+            }
+
+            margin-bottom: 19px;
+        }
+    }
+
+    .access-content {
+        display: grid;
+        grid-template-columns: 0.37fr 0.26fr 0.37fr;
+        column-gap: 5.6%;
+        align-items: center;
+
+        padding-left: 3.7vw;
+        padding-right: 3.7vw;
+
+        min-height: 638px;
+
+        @media(max-width:425px) {
+            min-height: 481px;
+        }
+
+        @media(max-width:767px) {
+            display: flex;
+            justify-content: center;
+        }
+
+        .left-points,
+        .right-points {
+            min-height: 321px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @media(max-width:767px) {
+                display: none;
+            }
+        }
+
+    }
+}
+
+.debit-card {
+    position: relative;
+    width: 100%;
+
+    @media (min-width:425px) and (max-width:767px) {
+        width: 36vw;
+    }
+
+    @media(max-width:425px) {
+        width: 54.6%;
+    }
+
+    .frame-89 {
+        position: relative;
+
+        .polygon-6 {
+            width: 20%;
+            // height: 79.78px;
+            margin-left: 40%;
+            margin-bottom: -7%;
+        }
+
+        .ellipse-37 {
+            // position: absolute;
+            width: 100%;
+            aspect-ratio: calc(348.9px/41.69px);
+            // bottom: -78px;
+            bottom: -19.5%;
+            border-radius: 100%;
+            background: #FBD866;
+            box-shadow: 0px 0px 28.9994px 21.7495px rgba(251, 249, 240, 0.15), inset 0px 48.0302px 21.7495px rgba(255, 253, 253, 0.1);
+        }
+
+        img {
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .frame-96-dots {
+            position: absolute;
+            width: 157%;
+            left: -58px;
+            top: -32%;
+            z-index: 3;
+
+            // @media(max-width:426px) {
+            //     width: 76vw;
+            //     left: 12vw;
+            //     top: 47px;
+            // }
+        }
+
+        .ellipse-38 {
+            z-index: 1;
+            position: absolute;
+            width: 60%;
+            aspect-ratio: 1;
+            left: 22%;
+            top: 113px;
+
+            background: #FBDC75;
+            opacity: 0.8;
+            filter: blur(320.806px);
+
+            @media (max-width:767px) {
+                width: 59%;
+                filter: blur(197px);
+            }
+        }
+    }
+}
+
+.effect-boundary {
+    position: relative;
+
+    .polygon-7 {
+        position: absolute;
+        width: 25vw;
+        left: 38vw;
+        top: 0;
+        z-index: 3;
+
+        @media (min-width:426px) and (max-width:768px) {
+            width: 43vw;
+            left: 29vw;
+        }
+
+        @media(max-width:426px) {
+            width: 80vw;
+            left: 12vw;
+        }
+
+
+    }
+
+
+
+}
+
+.access-points {
+    padding: 16px 24px;
+    background: #161616;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 15px 1fr;
+    column-gap: 15px;
+    align-items: center;
+    width: 100%;
+
+    .frame-100 {
+        position: relative;
+        height: 24px;
+        width: 24px;
+
+        .ellipse-48 {
+            border-radius: 100%;
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            left: 6px;
+            top: 6px;
+            @media(max-width:426px) {
+             display: none;
+            }
+            background: #FFFFFF;
+            opacity: 0.4;
+        }
+
+        .ellipse-47 {
+            border-radius: 100%;
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            @media(max-width:426px) {
+                display: none;
+               }
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    }
+
+    .content {
+        font-family: 'Euclid Circular A';
+        font-style: normal;
+        font-weight: 500;
+        font-size: clamp(12px, 1.6vw, 14px);
+        line-height: 150%;
+        /* or 21px */
+
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.02em;
+
+        color: #FFFFFF;
+
+    }
+}
+
+.access-strips {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    padding: 12px 0px;
+    opacity: 0.1;
+    overflow: hidden;
+
+    .access-strip-item {
+        font-family: 'Primal';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        /* identical to box height */
+
+        letter-spacing: 0.02em;
+
+        color: #FFFFFF;
+
+        margin-right: 44px;
+        margin-left: -20px;
+    }
+}

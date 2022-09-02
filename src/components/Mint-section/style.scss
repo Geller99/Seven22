@@ -1,0 +1,438 @@
+.mint-section-container {
+
+    padding-top: 40px;
+    // padding-bottom: 100px;
+    // background-color: var(--color-background-secondary);
+    position: relative;
+
+    // mobile media query
+    @media (max-width: 768px) {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 50px;
+
+        background: url('../../assets/images/mint_background.png') no-repeat center center/cover;
+    }
+
+    .mint-heading {
+        // border: 2px solid green;
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: -0.33px;
+        left: 70px;
+        z-index: 10;
+        margin-bottom: 30px;
+
+        @media(max-width:1200px) {
+            position: unset;
+            margin-top: 0px;
+            margin-left: 24px;
+        }
+
+        .heading-name {
+            font-family: 'Primal';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 80px;
+            line-height: 92px;
+            color: #FFFFFF;
+
+            min-width: 520px;
+
+            @media(max-width:768px) {
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 37px;
+                min-width: 220px;
+
+            }
+
+
+        }
+
+        .dotted-line {
+
+            position: relative;
+            left: -12px;
+
+            @media(max-width: 768px) {
+                left: -0px;
+            }
+        }
+
+
+    }
+
+    .mint-content-body {
+        color: var(--color-white);
+        // max-width: 1400px;
+        padding: 160px 40px;
+        // margin-top: 150px;
+        position: relative;
+
+        background: url('../../assets/images/mint_background.png') no-repeat center center/cover;
+
+        // tab media query
+        @media (max-width: 768px) {
+            padding: 70px 20px;
+        }
+
+        // mobile media query
+        @media (max-width: 576px) {
+            padding: 0px 5px;
+            margin: 50px auto;
+            background: none;
+        }
+
+        .horizontal-line {
+            position: absolute;
+            top: -54px;
+            width: 100%;
+            height: 1px;
+            opacity: 0.3;
+            background-color: #FFFFFF;
+            left: 0;
+            opacity: 0.3;
+
+            // mobile media query
+            @media (max-width: 576px) {
+                left: -34px;
+            }
+
+        }
+
+        .vertical-line {
+            position: absolute;
+            // top: -103px;
+            width: 1px;
+            height: 100%;
+            opacity: 0.3;
+            background-color: #FFFFFF;
+            top: 27%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+            opacity: 0.3;
+
+            display: block;
+
+            // mobile media query
+            @media (max-width: 576px) {
+                display: none;
+            }
+        }
+
+        .mint-content-wrapper {
+            // display: grid;
+            // grid-template-columns: 1fr 1fr;
+            // grid-gap: 20px;
+            // place-items: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            // tablet media query
+            @media (max-width: 576px) {
+                flex-direction: column;
+                margin-bottom: 0px;
+            }
+
+
+            .left-container {
+                margin-right: 50px;
+
+                // tablet media query
+                @media (max-width: 768px) {
+                    margin-right: 10px;
+                }
+
+                // mobile media query
+                @media (max-width: 576px) {
+                    margin-bottom: 40px;
+                    margin-right: 0px;
+
+                }
+
+                .items-wrapper {
+                    border: 1px solid #FFFFFF;
+                    padding: 20px;
+                    width: 400px;
+                    height: 350px;
+                    display: flex;
+                    justify-content: center;
+                    // align-items: center;
+                    flex-direction: column;
+
+
+                    // tablet media query
+                    @media (max-width: 768px) {
+                        width: 300px;
+                        height: 250px;
+                    }
+
+                    // mobile media query
+                    @media (max-width: 576px) {
+                        width: 100%;
+                        height: 281px;
+                    }
+
+                    .item {
+                        display: flex;
+                        align-items: baseline;
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+
+                        // mobile media query
+                        @media (max-width: 576px) {
+                            padding-bottom: 0px;
+
+                        }
+
+                        .desc {
+                            font-family: 'Code Next', sans-serif;
+                            font-style: normal;
+                            font-weight: 800;
+                            font-size: 24px;
+                            line-height: 35px;
+
+                            color: #FFFFFF;
+                            padding-left: 15px;
+
+                            // tablet media query
+                            @media (max-width: 768px) {
+                                font-size: 20px;
+                                line-height: 30px;
+                            }
+
+                            // mobile media query
+                            @media (max-width: 576px) {
+                                font-weight: 800;
+                                font-size: 18px;
+                                line-height: 26px;
+                            }
+                        }
+                    }
+                }
+
+                .items-footer-heading {
+                    padding-top: 30px;
+
+                    h2 {
+                        font-family: 'Primal';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 32px;
+                        line-height: 37px;
+                        padding-bottom: 10px;
+
+                        // tablet media query
+                        @media (max-width: 768px) {
+                            font-size: 24px;
+                            line-height: 30px;
+                        }
+
+                        // mobile media query
+                        @media (max-width: 576px) {
+                            font-weight: 800;
+                            font-size: 18px;
+                            line-height: 26px;
+                        }
+
+                    }
+
+                    h3 {
+                        font-family: 'Euclid Circular A';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 32px;
+                        line-height: 41px;
+                        color: #707070;
+
+                        // tablet media query
+                        @media (max-width: 768px) {
+                            font-size: 24px;
+                            line-height: 30px;
+                        }
+
+                        // mobile media query
+                        @media (max-width: 576px) {
+                            font-weight: 700;
+                            font-size: 14px;
+                            line-height: 18px;
+                            margin-bottom: 20px;
+
+                        }
+                    }
+                }
+            }
+
+            .right-container {
+                margin-left: 50px;
+
+
+                // tablet media query
+                @media (max-width: 768px) {
+                    margin-left: 10px;
+                }
+
+                // mobile media query
+                @media (max-width: 576px) {
+                    margin-left: 0px;
+
+                }
+
+
+                .items-wrapper {
+                    border: 1px solid #FFFFFF;
+                    padding: 20px;
+                    width: 400px;
+                    height: 350px;
+                    display: flex;
+                    justify-content: flex-start;
+                    // align-items: center;
+                    flex-direction: column;
+
+                    // tablet media query
+                    @media (max-width: 768px) {
+                        width: 300px;
+                        height: 250px;
+                    }
+
+                    // mobile media query
+                    @media (max-width: 576px) {
+                        width: 100%;
+                        height: 281px;
+                        margin-top: -30px;
+                    }
+
+                    .item {
+                        display: flex;
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        align-items: baseline;
+
+
+                        // mobile media query
+                        @media (max-width: 576px) {
+                            padding-bottom: 0px;
+
+                        }
+
+                        img {
+                            padding-top: 14px;
+                            
+                        }
+
+                        .desc {
+                            font-family: 'Code Next', sans-serif;
+                            font-style: normal;
+                            font-weight: 800;
+                            font-size: 24px;
+                            line-height: 35px;
+
+                            color: #FFFFFF;
+                            padding-left: 15px;
+
+                            // tablet media query
+                            @media (max-width: 768px) {
+                                font-size: 20px;
+                                line-height: 30px;
+                            }
+
+                            // mobile media query
+                            @media (max-width: 576px) {
+                                font-weight: 800;
+                                font-size: 18px;
+                                line-height: 26px;
+                            }
+                        }
+                    }
+                }
+
+                .items-footer-heading {
+                    padding-top: 30px;
+
+                    h2 {
+                        font-family: 'Primal';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 32px;
+                        line-height: 37px;
+                        padding-bottom: 10px;
+
+                        // tablet media query
+                        @media (max-width: 768px) {
+                            font-size: 24px;
+                            line-height: 30px;
+                        }
+
+                        // mobile media query
+                        @media (max-width: 576px) {
+                            font-weight: 800;
+                            font-size: 18px;
+                            line-height: 26px;
+                        }
+                    }
+
+                    h3 {
+                        font-family: 'Euclid Circular A';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 32px;
+                        line-height: 41px;
+                        color: #707070;
+
+                        // tablet media query
+                        @media (max-width: 768px) {
+                            font-size: 24px;
+                            line-height: 30px;
+                        }
+
+                        // mobile media query
+                        @media (max-width: 576px) {
+                            font-weight: 700;
+                            font-size: 14px;
+                            line-height: 18px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.circle-box {
+
+    position: absolute;
+    left: 0px;
+    top: -20px;
+
+
+
+    :nth-child(2) {
+        position: relative;
+        top: 51px;
+        left: -67px;
+
+        @media(max-width:768px) {
+            top: 26px;
+            left: -56px;
+        }
+
+    }
+
+    @media(max-width: 768px) {
+        img {
+            height: 60px;
+            width: 60px;
+        }
+    }
+}

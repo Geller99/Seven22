@@ -1,0 +1,301 @@
+.footer-container {
+
+
+    .footer-header {
+        .dash-line {
+            opacity: 0.5;
+            /* Grey */
+
+            border: 1px dashed #707070;
+        }
+    }
+
+    .footer-content-wrapper {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        display: grid;
+        // 20% first column and 80% second column
+        grid-template-columns: 30% 70%;
+
+        // tablet media query
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        // mobile media query
+        @media (max-width: 576px) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .logo-container {
+            margin: 0 auto;
+
+        }
+
+        .text-content-container {
+
+            .text-content {
+                font-family: 'Primal';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 40px;
+                line-height: 150%;
+                color: var(--color-white);
+                font-size: 30px;
+
+                // tablet media query
+                @media (max-width: 768px) {
+                    font-size: 16px;
+                    line-height: 150%;
+                    text-align: center;
+                    margin-top: 20px;
+                }
+            }
+
+            .line-divider {
+                margin-top: 40px;
+                margin-bottom: 40px;
+                opacity: 0.5;
+                /* Grey */
+
+                border: 1px solid #707070;
+
+                // tablet media query
+                @media (max-width: 768px) {
+                    display: none;
+
+                }
+            }
+
+            .cta-action-container {
+                margin-top: 40px;
+                margin-bottom: 40px;
+                display: flex;
+
+                // tablet media query
+                @media (max-width: 768px) {
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                // mobile media query
+                @media (max-width: 576px) {
+                    // flex-direction: column;
+                    justify-content: space-around;
+
+                }
+
+                .google-play-btn {
+                    margin-right: 20px;
+                    background-color: var(--color-white);
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 15px 30px;
+                    cursor: pointer;
+
+                    .icon {
+                        img {
+
+                            // mobile media query
+                            @media (max-width: 576px) {
+                                padding-right: 10px;
+
+                            }
+                        }
+                    }
+
+                    // mobile media query
+                    @media (max-width: 576px) {
+                        margin-right: 0px;
+                        margin-bottom: 0px;
+                        // width: 300px;
+
+                    }
+
+
+                    .btn-title {
+                        font-family: 'Code Next', sans-serif;
+
+                        font-style: normal;
+                        font-weight: 800;
+                        font-size: 18px;
+                        line-height: 150%;
+                        /* identical to box height, or 27px */
+                        padding-left: 10px;
+
+
+                        color: #000000;
+
+
+                        // mobile media query
+                        @media (max-width: 576px) {
+                            display: none;
+                        }
+                    }
+
+                    .btn-title-mobile {
+                        display: none;
+                    }
+
+                    // mobile media query
+                    @media (max-width: 576px) {
+                        margin-right: 0px;
+                        padding: 12px 26px;
+                        margin-right: 5px;
+
+                        // width: 300px;
+                        .btn-title-mobile {
+                            display: block;
+                            font-family: 'Code Next', sans-serif;
+
+                            font-style: normal;
+                            font-weight: 800;
+                            font-size: 12px;
+                            line-height: 150%;
+                            /* identical to box height, or 18px */
+
+
+                            color: #000000;
+                        }
+
+                    }
+                }
+
+                .apple-btn {
+                    background-color: var(--color-white);
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 15px 30px;
+                    cursor: pointer;
+
+
+
+                    .icon-apple {
+                        height: 27.43px;
+
+                        // mobile media query
+                        @media (max-width: 576px) {
+                            padding-right: 10px;
+
+                        }
+                    }
+
+
+
+                    .btn-title {
+                        font-family: 'Code Next', sans-serif;
+
+                        font-style: normal;
+                        font-weight: 800;
+                        font-size: 18px;
+                        line-height: 150%;
+                        /* identical to box height, or 27px */
+                        padding-left: 10px;
+                        display: block;
+
+                        // mobile media query
+                        @media (max-width: 576px) {
+                            display: none;
+
+                        }
+                    }
+
+                    .btn-title-mobile {
+                        display: none;
+
+                    }
+
+                    // mobile media query
+                    @media (max-width: 576px) {
+                        margin-right: 0px;
+                        padding: 12px 26px;
+
+                        // width: 300px;
+                        .btn-title-mobile {
+                            display: block;
+                            font-family: 'Code Next', sans-serif;
+
+                            font-style: normal;
+                            font-weight: 800;
+                            font-size: 12px;
+                            line-height: 150%;
+                            /* identical to box height, or 18px */
+
+
+                            color: #000000;
+
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright-top-line {
+        opacity: 0.5;
+        border: 1px solid #707070;
+    }
+
+    .copyright-container {
+        padding: 30px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        // mobile media query
+        @media (max-width: 576px) {
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text-container {
+            p {
+                font-family: 'Code Next', sans-serif;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 18px;
+                line-height: 150%;
+                color: #707070;
+
+                // mobile media query
+                @media (max-width: 576px) {
+                    text-align: center;
+                    font-weight: 800;
+                    font-size: 12px;
+                    line-height: 150%;
+                }
+            }
+        }
+
+        .social-icon-container {
+            display: flex;
+
+            .social-icon {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                background-color: var(--color-white);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 10px;
+            }
+        }
+    }
+}
