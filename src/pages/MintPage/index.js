@@ -153,8 +153,8 @@ const MintPage = () => {
 
     const handleMint = async () => {
         try{
-            if( !(await connect( true )) )
-                return;
+            // if( !(await connect( true )) )
+            //     return;
 
 
             const saleIsActive = await session.contract.methods.paused().call();
@@ -210,8 +210,8 @@ const MintPage = () => {
         //   await contract.presale( proof, account.alloc, amount );
     
             try{
-                if( !(await connect( true )) )
-                return;
+                // if( !(await connect( true )) )
+                // return;
 
                 // if( !(await session.connectWeb3( true, ethProvider )) ){
                 //     if(!(await connect( true, ethProvider ))){
