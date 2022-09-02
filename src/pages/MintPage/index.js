@@ -205,16 +205,19 @@ const MintPage = () => {
     };
 
     const handlePresale = async () => {
-        let provider = window?.ethereum;
+        // let provider = window?.ethereum;
         //   await contract.estimateGas.presale( proof, account.alloc, amount );
         //   await contract.presale( proof, account.alloc, amount );
     
             try{
-                if( !(await session.connectWeb3( true, provider )) ){
-                    if(!(await connect( true ))){
-                        return;
-                    }
-                }
+                if( !(await connect( true )) )
+                return;
+
+                // if( !(await session.connectWeb3( true, ethProvider )) ){
+                //     if(!(await connect( true, ethProvider ))){
+                //         return;
+                //     }
+                // }
     
                 const merkle = new Merkle();
                 merkle.load();
