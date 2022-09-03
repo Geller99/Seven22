@@ -13,13 +13,17 @@ class Merkle{
   }
 
   load(){
-      const abiCoder = new ethers.utils.AbiCoder();
+      // const abiCoder = new ethers.utils.AbiCoder();
 
       const leaves = allowList.map( item => {
       const account = Merkle.normalize( item.account );
-      const allowance = abiCoder.encode(
-        [ "tuple( address account, uint256 alloc )" ],
-        [ { account: account, alloc: item.alloc } ]
+      // const allowance = abiCoder.encode(
+      //   [ "tuple( address account, uint256 alloc )" ],
+      //   [ { account: account, alloc: item.alloc } ]
+      // );
+      const allowance = ethers.utils.solidityKeccak256(
+        [ "address", "uint" ],
+        [ account, item.alloc ]
       );
 
       const leaf = keccak256( allowance );
