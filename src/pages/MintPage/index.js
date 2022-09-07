@@ -23,23 +23,22 @@ const TARGET_DATE_MS = 1662508800000;
 // const TARGET_DATE_MS = 1661777535181;
 
 //mainnet
-/*
+
 const network = {
     chain:      EthereumSession.COMMON_CHAINS[1],
     infuraId: '9f57294117e34952877d794e30a0fdbe', //llama
-    name:                              'mainnet'
+    name:      'mainnet'
 };
-*/
 
 
 
 //rinkeby
 
-const network = {
-    chain: EthereumSession.COMMON_CHAINS[4],
-    infuraId: '9f57294117e34952877d794e30a0fdbe', //llama
-    name: 'rinkeby'
-};
+// const network = {
+//     chain: EthereumSession.COMMON_CHAINS[4],
+//     infuraId: '9f57294117e34952877d794e30a0fdbe', //llama
+//     name: 'rinkeby'
+// };
 
 network.url = `https://${network.name}.infura.io/v3/${network.infuraId}`;
 
@@ -52,7 +51,7 @@ const MintPage = () => {
     const session = React.useMemo(() => {
         const tmp = new EthereumSession({
             chain: network.chain,
-            contractAddress: '0xAD9e0eA201526EA137Eb9E7f99776855E663f54F',
+            contractAddress: '0xBed947eB04Fc045bF4c30e8dA29e7c5efA2d40d3',
             contractABI: contractABI
         });
 
@@ -157,8 +156,8 @@ const MintPage = () => {
             //     return;
 
 
-            const saleIsActive = await session.contract.methods.paused().call();
-            if( saleIsActive ){
+            const saleIsActive = await session.contract.methods.isPublicSaleActive().call();
+            if( !saleIsActive ){
                 alert( "Sale is not active" );
                 return;
             }
@@ -220,9 +219,11 @@ const MintPage = () => {
                 // }
     
                 const merkle = new Merkle();
-                
                 merkle.load();
-    
+                // const root = merkle.tree.getHexRoot();
+                // console.info(root);
+                
+                
                 const account = merkle.getAccount( ethAccount );
                 if( !account ){
                     alert( "No claims" );
@@ -231,8 +232,8 @@ const MintPage = () => {
             
                 const amount = mintQuantity;
                 const proof = merkle.tree.getHexProof( account.leaf );
-                const saleIsActive = await session.contract.methods.paused().call();
-                if(saleIsActive){
+                const saleIsActive = await session.contract.methods.isPresaleActive().call();
+                if(!saleIsActive){
                     alert( "Sale is not active" );
                     return;
                 }
@@ -322,7 +323,7 @@ const MintPage = () => {
             preSaleButton = "Claim Presale";
             //"Connected: "+ ethAccount.substr( 0, 6 ) +'...'+ ethAccount.substr( 38 );
         }
-
+        
         return (
             <>
                 {/* <NavBar /> */}

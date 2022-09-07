@@ -7,7 +7,6 @@ class Merkle{
   accounts = {};
   tree = null;
   session = null;
-  root = null;
 
   getAccount( account ){
     return this.accounts[ account.toLowerCase() ];
@@ -33,12 +32,10 @@ class Merkle{
         leaf:       leaf,
         alloc: item.alloc
       }
-
       return leaf;
     });
     
     this.tree = new MerkleTree(leaves, keccak256, { sortPairs: true });
-    this.root = this.tree.getRoot();
   }
 
   static normalize( account ){
