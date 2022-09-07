@@ -220,6 +220,7 @@ const MintPage = () => {
                 // }
     
                 const merkle = new Merkle();
+                
                 merkle.load();
     
                 const account = merkle.getAccount( ethAccount );

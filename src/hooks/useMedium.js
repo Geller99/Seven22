@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 function useMedium() {
-    const user_medium_handle = "@geller99"
+    const user_medium_handle = "@seven22project"
     const [blogs, setBlogs] = useState([]);
     const fetchBlogs = async () => {
         const api_url = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/${user_medium_handle}`;
